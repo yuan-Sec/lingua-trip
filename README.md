@@ -1,13 +1,4 @@
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: '13dc19c4-9295-486a-8aa5-3e6eb7db1c39'
-  PropagateID: '13dc19c4-9295-486a-8aa5-3e6eb7db1c39'
-  ReservedCode1: '144f918b-66a8-458b-baec-8b7c539a88c2'
-  ReservedCode2: '144f918b-66a8-458b-baec-8b7c539a88c2'
----
+
 
 # LinguaTrip · 语旅 🌍
 
@@ -74,4 +65,3 @@ src/
 
 MIT
 
-> AI生成
