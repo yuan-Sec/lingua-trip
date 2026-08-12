@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+body {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  background: #F8F9FA;
+  color: #2C3E50;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 防滑条但保持滚动 */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* 触控纸纹背景 */
+.paper-texture {
+  background:
+    radial-gradient(circle at 15% 30%, rgba(255,140,66,0.06), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(74,144,226,0.05), transparent 40%),
+    #F8F9FA;
+}
+
+/* 波纹动画 */
+.wave-bar {
+  animation: wave 1.2s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+/* 3D 护照 */
+.perspective-scene { perspective: 1200px; }
+.passport-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.passport-3d.is-open { transform: rotateY(180deg) rotateX(4deg) translateX(-18px); }
+
+/* 撒纸片 */
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 14px;
+  border-radius: 2px;
+  animation: confettiFall 2.4s ease-in forwards;
+}
+@keyframes confettiFall {
+  0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(420px) rotate(720deg); opacity: 0; }
+}
+
+/* 邮戳 */
+.stamp {
+  border: 3px dashed rgba(212,160,23,0.85);
+  color: #B8860B;
+  transform: rotate(-12deg);
+  border-radius: 14px;
+  background: rgba(255,248,230,0.7);
+}
+
+/* 手写板网格 */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(44,62,80,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(44,62,80,0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* 墨迹混合 */
+.ink-mix { mix-blend-mode: multiply; }
